@@ -22,6 +22,11 @@ import{MatNativeDateModule} from '@angular/material/core';
 import{MatRadioModule} from '@angular/material/radio';
 import {MatSelectModule} from '@angular/material/select';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { ListCarsComponent } from './components/list-cars/list-cars.component';
+import { EnregistrementComponent } from './components/enregistrement/enregistrement.component';
+import { AddAbonnementComponent } from './components/add-abonnement/add-abonnement.component';
+
 
 
 
@@ -31,8 +36,11 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     AddCarComponent,
     HomeComponent,
     UserComponent,
+    NavbarComponent,
+    ListCarsComponent,
+    EnregistrementComponent,
+    AddAbonnementComponent,
     
-   
   ],
   imports: [
     BrowserModule,
@@ -46,7 +54,8 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     MatIconModule,
     MatCardModule,
     MatTableModule,
-    MatDialogModule
+    MatDialogModule,
+    MatToolbarModule
     
     
   ],
