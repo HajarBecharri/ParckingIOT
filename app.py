@@ -135,9 +135,93 @@ def login():
        
         return {}
     
-    
+@app.route('/check_entre', methods=['POST'])
+def check_entre():
+    myCursor = mydb.cursor()
+    try:
+        data = request.get_json()
+        code_matricule = data.get('code_matricule')
 
-    
+        # Check if the car exists
+        car_exists_query = "SELECT * FROM cars WHERE code_matricule = %s"
+        car_exists_values = (code_matricule,)
+        myCursor.execute(car_exists_query, car_exists_values)
+        car_exists = myCursor.fetchone()
+
+        if not car_exists:
+            return jsonify({"error": "Car does not exist"})
+
+        # Check if there is a valid abonnement for the car
+        abonnement_query = "SELECT * FROM abonnement WHERE code_matricule = %s AND date_expiration > NOW()"
+        abonnement_values = (code_matricule,)
+        myCursor.execute(abonnement_query, abonnement_values)
+        valid_abonnement = myCursor.fetchone()
+
+        if not valid_abonnement:
+            return jsonify({"error": "Abonnement expired or not found"})
+
+        # Insert enregistrement
+        current_datetime = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        insert_enregistrement_query = "INSERT INTO enregistrement (code_matricule, datetime_entree, datetime_sortie) VALUES (%s, %s, NULL)"
+        insert_enregistrement_values = (code_matricule, current_datetime)
+        myCursor.execute(insert_enregistrement_query, insert_enregistrement_values)
+        mydb.commit()
+
+        # Update car's etat to 'interieur'
+        update_etat_query = "UPDATE cars SET etat = 'interieur' WHERE code_matricule = %s"
+        update_etat_values = (code_matricule,)
+        myCursor.execute(update_etat_query, update_etat_values)
+        mydb.commit()
+
+        return jsonify({"message": "Enregistrement added successfully"})
+
+    except Exception as e:
+        return jsonify({"error": str(e)})
+
+@app.route('/check_sortie', methods=['POST'])
+def check_sortie():
+    myCursor = mydb.cursor()
+    try:
+        data = request.get_json()
+        code_matricule = data.get('code_matricule')
+
+        # Check if the car exists
+        car_exists_query = "SELECT * FROM cars WHERE code_matricule = %s"
+        car_exists_values = (code_matricule,)
+        myCursor.execute(car_exists_query, car_exists_values)
+        car_exists = myCursor.fetchone()
+
+        if not car_exists:
+            return jsonify({"error": "Car does not exist"})
+
+        # Check if there is an active enregistrement for the car
+        active_enregistrement_query = "SELECT * FROM enregistrement WHERE code_matricule = %s AND datetime_sortie IS NULL"
+        active_enregistrement_values = (code_matricule,)
+        myCursor.execute(active_enregistrement_query, active_enregistrement_values)
+        active_enregistrement = myCursor.fetchone()
+
+        if not active_enregistrement:
+            return jsonify({"error": "No active enregistrement found for the car"})
+
+        # Update date_sortie in enregistrement table
+        current_datetime = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        update_sortie_query = "UPDATE enregistrement SET datetime_sortie = %s WHERE code_matricule = %s AND datetime_sortie IS NULL"
+        update_sortie_values = (current_datetime, code_matricule)
+        myCursor.execute(update_sortie_query, update_sortie_values)
+        mydb.commit()
+
+        # Update car's etat to 'exterieur'
+        update_etat_query = "UPDATE cars SET etat = 'exterieur' WHERE code_matricule = %s"
+        update_etat_values = (code_matricule,)
+        myCursor.execute(update_etat_query, update_etat_values)
+        mydb.commit()
+
+        return jsonify({"message": "Sortie enregistrement processed successfully"})
+
+    except Exception as e:
+        return jsonify({"error": str(e)})
+
+
 
 app.run()
 #we can add car without model
