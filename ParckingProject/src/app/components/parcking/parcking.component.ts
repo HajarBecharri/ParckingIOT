@@ -1,21 +1,21 @@
 import { Component } from '@angular/core';
-import { CarService } from 'src/app/services/car.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CarService } from 'src/app/services/car.service';
 import { MatriculeModel } from '../add-car/car.module';
 
 @Component({
-  selector: 'app-list-cars',
-  templateUrl: './list-cars.component.html',
-  styleUrls: ['./list-cars.component.css']
+  selector: 'app-parcking',
+  templateUrl: './parcking.component.html',
+  styleUrls: ['./parcking.component.css']
 })
-export class ListCarsComponent {
+export class ParckingComponent {
   cars!:MatriculeModel[];
-  displayedColumns: string[] = ['numero matricule','Nom client', 'CNI client','date enregistremnt','etat','Rapport'];
+  displayedColumns: string[] = ['numero matricule','Nom client', 'CNI client','date enregistremnt','Rapport'];
   dataSource!:MatriculeModel[]
   searchQuery: string = '';
   constructor(private myservice:CarService,private activatedRouter:ActivatedRoute,
     private router:Router){
-    this.myservice.getAllcars().subscribe(
+    this.myservice.getParckingcars().subscribe(
   
         (data)=>{
   
@@ -27,6 +27,7 @@ export class ListCarsComponent {
   
     );
   }
+
   searchCars() {
     if (this.searchQuery) {
       this.dataSource = this.cars.filter(

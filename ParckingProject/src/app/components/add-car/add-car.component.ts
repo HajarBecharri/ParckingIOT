@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CarModule } from './car.module';
+import { MatriculeModel } from './car.module';
 import { CarService } from '../../services/car.service';
 import { Router } from '@angular/router';
 import { UserModule } from '../user/user.module';
@@ -12,12 +12,13 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class AddCarComponent {
   // two way binding
-  model!:string ;
-
-  hp!:number ;
-
-  marque!:string ;
-  user!:UserModule
+ 
+  user!:UserModule;
+  code_matricule!: string;
+  nom_client!: string;
+  cni_client!: string;
+  date_enregistrement!: Date | null;
+  etat!: string;
 
   constructor(private carservice:CarService,private router:Router,private userservice:UserService){
     userservice.userObservable.subscribe((newuser)=>
@@ -28,17 +29,17 @@ export class AddCarComponent {
 
   //event bindding
   
-  
   saveMe(){
 
     
 
-    let mycar = new CarModule() ;
+    let mycar = new MatriculeModel() ;
 
-    mycar.id_car = 0 ;
-    mycar.hp = this.hp ;
-    mycar.model = this.model ;
-    mycar.marque = this.marque ;
+    mycar.code_matricule = this.code_matricule ;
+    mycar.cni_client = this.cni_client ;
+    mycar.nom_client = this.nom_client ;
+    mycar.date_enregistrement = new Date();
+    
 
     this.carservice.saveCare(mycar).subscribe();
     this.router.navigateByUrl("home")

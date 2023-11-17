@@ -11,7 +11,7 @@ from datetime import datetime,timedelta
 app = Flask(__name__)
 
 CORS(app)
-mydb=mysql.connector.connect(user='root',password='',host='localhost',database='projectflask')
+mydb=mysql.connector.connect(user='root',password='',host='localhost',database='projectparcking')
 
 app.config["DEBUG"]=True
 
@@ -20,43 +20,87 @@ app.config["DEBUG"]=True
 @app.route('/savecar' , methods = ['POST'])
 def saveCar():
 
+
     args = request.json
     print(args)
-    id_car = args.get('id')
-    model = args.get('model')
-    hp = args.get('hp')
-    marque = args.get('marque')
+    code_matricule = args.get('code_matricule')
+    nom_client = args.get('nom_client')
+    cni_client = args.get('cni_client')
+    date_enregistrement = args.get('date_enregistrement')
 
     myCursor = mydb.cursor()
 
-    mycar = car.Car(id_car , model ,hp , marque)
-    req = "insert into cars (model , hp , marque ) values (%s , %s , %s)"
-    val = (mycar.model , mycar.hp , mycar.marque)
+    mycar = car.Car(code_matricule , nom_client ,cni_client , date_enregistrement)
+    req = "insert into cars (code_matricule , nom_client ,cni_client ,date_enregistrement) values (%s , %s , %s,%s)"
+    val = (mycar.code_matricule , mycar.nom_client , mycar.cni_client,mycar.date_enregistrement)
     myCursor.execute(req , val)
     mydb.commit()
     return {'status':'save :'}
+
 @app.route('/cars' , methods = ['GET'])
 def getCars():
     mylist = []
     req = "select * from cars"
     
-
     myCursor = mydb.cursor()
     myCursor.execute(req)
     myresult = myCursor.fetchall()
     for x in myresult:
-        mylist.append(car.Car(x[0] ,x[1], x[2] , x[3]).__dict__)
-        
-
+        car_instance = car.Car(x[0], x[1], x[2], str(x[3]),x[4])
+        mylist.append(car_instance.__dict__)
+    
     return json.dumps(mylist)
+
+@app.route('/carsInParking', methods=['GET'])
+def getCarsInParking():
+    
+    try:
+        myCursor = mydb.cursor()
+
+        # Fetch cars with etat not equal to 'exterieur'
+        req = "SELECT * FROM cars WHERE etat != 'exterieur'"
+        myCursor.execute(req)
+        myresult = myCursor.fetchall()
+
+        cars_in_parking = []
+
+        for x in myresult:
+         car_instance = car.Car(x[0], x[1], x[2], str(x[3]),x[4])
+         cars_in_parking.append(car_instance.__dict__)
+    
+        return json.dumps(cars_in_parking)
+
+    except Exception as e:
+        return jsonify({"error": str(e)})
+
+@app.route('/saveEnregistrement', methods=['POST'])
+def saveEnregistrement():
+    try:
+        data = request.get_json()
+        code_matricule = data.get('code_matricule')
+
+        # Get the current date and time
+        current_datetime = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+        # Insert the new enregistrement into the database
+        req = "INSERT INTO enregistrement (code_matricule, datetime_entree, datetime_sortie) VALUES (%s, %s, %s)"
+        values = (code_matricule, current_datetime, None)  # Assuming datetime_sortie can be NULL
+
+        myCursor = mydb.cursor()
+        myCursor.execute(req, values)
+        mydb.commit()
+
+        return jsonify({"message": "Enregistrement added successfully"})
+
+    except Exception as e:
+        return jsonify({"error": str(e)})
 @app.route('/login' , methods = ['POST'])
 def login():
     mylist = []
     args = request.json
-    id_user=args.get('id')
     email=args.get('email')
     password_user=args.get('password')
-    req = "select * from users where email=%s AND password=%s"
+    req = "select * from user where email=%s AND password=%s"
     val=(email,password_user)
     myCursor = mydb.cursor()
     myCursor.execute(req,val)
@@ -64,16 +108,20 @@ def login():
     if(myresult):
         exp_epoch=datetime.now()+timedelta(minutes=15)
         exp_epoch_time=int(exp_epoch.timestamp())
-        myuser:myuser.user(id_user,email,password_user)
+        myuser:myuser.user(email,password_user)
         payload={
-            "payload":id_user,
+        
             "exp":exp_epoch_time
         }
         token=jwt.encode(payload,"sagar",algorithm="HS256")
-        return {'id':id_user,'email':email,'password':password_user,'token':token}
+        return {'email':email,'password':password_user,'token':token}
     else:
        
         return {}
+    
+    
+
+    
 
 app.run()
 #we can add car without model

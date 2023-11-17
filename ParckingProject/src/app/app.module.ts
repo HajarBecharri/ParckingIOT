@@ -26,6 +26,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ListCarsComponent } from './components/list-cars/list-cars.component';
 import { EnregistrementComponent } from './components/enregistrement/enregistrement.component';
 import { AddAbonnementComponent } from './components/add-abonnement/add-abonnement.component';
+import { ParckingComponent } from './components/parcking/parcking.component';
+
 
 
 
@@ -40,6 +42,7 @@ import { AddAbonnementComponent } from './components/add-abonnement/add-abonneme
     ListCarsComponent,
     EnregistrementComponent,
     AddAbonnementComponent,
+    ParckingComponent,
     
   ],
   imports: [

@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./enregistrement.component.css']
 })
 export class EnregistrementComponent {
+  
 
 }

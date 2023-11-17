@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable,tap } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { User } from '../user';
-import { CarModule } from '../components/add-car/car.module';
 import { UserModule } from '../components/user/user.module';
 import { Router } from '@angular/router';
 

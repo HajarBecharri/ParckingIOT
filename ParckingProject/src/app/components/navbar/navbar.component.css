@@ -6,3 +6,32 @@
   .spacer {
     flex: 1 1 auto;
   }
+  .search-bar {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  /* Style the input */
+  .search-bar input {
+    padding-right: 40px; /* Space for the search and clear icons */
+  }
+  
+  /* Style the search and clear icons */
+  .search-bar button {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  /* Style the search icon */
+  .search-bar mat-icon {
+    color: #888; /* Light gray color for the icon, adjust as needed */
+    font-size: 24px; /* Adjust the size of the icon */
+    cursor: pointer;
+  }
+  
+  /* Style the clear icon */
+  .search-bar mat-icon.clear {
+    color: #ff5722; /* Red color for the clear icon, adjust as needed */
+  }

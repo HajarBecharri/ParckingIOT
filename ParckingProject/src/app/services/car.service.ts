@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { CarModule } from '../components/add-car/car.module';
+import { MatriculeModel } from '../components/add-car/car.module';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
@@ -17,21 +17,25 @@ export class CarService {
   constructor(private http:HttpClient) { }
 
 
-  saveCare(car:CarModule){
+  saveCare(matricule:MatriculeModel){
 
-    return this.http.post(this.url+"/savecar" , car , this.httpOptions );
+    return this.http.post(this.url+"/savecar" , matricule , this.httpOptions );
 
   }
-  getAllcars():Observable<CarModule[]>{
+  getAllcars():Observable<MatriculeModel[]>{
 
-     return  this.http.get<CarModule[]>(this.url+"/cars" ,this.httpOptions );
+     return  this.http.get<MatriculeModel[]>(this.url+"/cars" ,this.httpOptions );
   }
+  getParckingcars():Observable<MatriculeModel[]>{
+
+    return  this.http.get<MatriculeModel[]>(this.url+"/carsInParking" ,this.httpOptions );
+ }
   
   delete(id:number){
     return this.http.get(this.url+"/deletecar/"+id );
   }
 
-  update(car:CarModule){
+  update(car:MatriculeModel){
     return this.http.post(this.url+"/updatecar",car );
   }
 

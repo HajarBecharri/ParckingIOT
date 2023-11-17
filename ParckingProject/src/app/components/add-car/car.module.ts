@@ -1,13 +1,8 @@
-export class CarModule {
 
-    // les attributs 
-  
-    public id_car!:number ;
-    public model!:string ;
-    public hp!:number;
-    public marque!:string ;
-  
-  
-  
-  
-   }
+export class MatriculeModel {
+    code_matricule!: string;
+    nom_client!: string;
+    cni_client!: string;
+    date_enregistrement!: Date | null;
+    etat!: string;
+  }
