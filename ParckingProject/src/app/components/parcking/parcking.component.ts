@@ -9,6 +9,8 @@ import { MatriculeModel } from '../add-car/car.module';
   styleUrls: ['./parcking.component.css']
 })
 export class ParckingComponent {
+  
+  title = 'Voitures à l intérieur du Parc' ;
   cars!:MatriculeModel[];
   displayedColumns: string[] = ['numero matricule','Nom client', 'CNI client','date enregistremnt','Rapport'];
   dataSource!:MatriculeModel[]
@@ -42,5 +44,6 @@ export class ParckingComponent {
     this.searchQuery = '';
     this.dataSource = this.cars;
   }
+ 
 
 }

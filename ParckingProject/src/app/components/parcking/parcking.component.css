@@ -1,9 +1,4 @@
-.parking-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px; /* Add padding as needed */
-  }
+
   
   /* Add styles for the search bar */
   .search-bar {

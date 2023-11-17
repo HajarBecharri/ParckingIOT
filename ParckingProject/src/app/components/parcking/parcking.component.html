@@ -1,4 +1,4 @@
-<div class="parking-container">
+
   <!-- Your existing content -->
 
   <!-- Search bar -->
@@ -6,45 +6,52 @@
     <input matInput placeholder="Search by Code Matricule" [(ngModel)]="searchQuery" (input)="searchCars()" />
     <button mat-button *ngIf="searchQuery" (click)="clearSearch()">Clear</button>
   </mat-form-field>
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <mat-card>
+    <mat-card-title class="mat-h2">{{ title }}</mat-card-title>
+    <mat-card-content>
+      <!-- ... existing code for displaying enregistrements for Matricule X ... -->
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-    <!--- Note that these columns can be defined in any order.
-          The actual rendered columns are set as a property on the row definition" -->
-  
-    <!-- Position Column -->
-   
-    <ng-container matColumnDef="numero matricule">
-        <th mat-header-cell *matHeaderCellDef> matricule </th>
-        <td mat-cell *matCellDef="let element"> {{element.code_matricule}} </td>
-      </ng-container>
+        <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
       
-    <!-- Name Column -->
-    <ng-container matColumnDef="Nom client">
-      <th mat-header-cell *matHeaderCellDef> Nom client </th>
-      <td mat-cell *matCellDef="let element"> {{element.nom_client}} </td>
-    </ng-container>
+        <!-- Position Column -->
+       
+        <ng-container matColumnDef="numero matricule">
+            <th mat-header-cell *matHeaderCellDef> matricule </th>
+            <td mat-cell *matCellDef="let element"> {{element.code_matricule}} </td>
+          </ng-container>
+          
+        <!-- Name Column -->
+        <ng-container matColumnDef="Nom client">
+          <th mat-header-cell *matHeaderCellDef> Nom client </th>
+          <td mat-cell *matCellDef="let element"> {{element.nom_client}} </td>
+        </ng-container>
+      
+        <!-- Weight Column -->
+        <ng-container matColumnDef="CNI client">
+          <th mat-header-cell *matHeaderCellDef> CNI client </th>
+          <td mat-cell *matCellDef="let element"> {{element.cni_client}} </td>
+        </ng-container>
+        <ng-container matColumnDef="date enregistremnt">
+            <th mat-header-cell *matHeaderCellDef>date enregistremnt </th>
+            <td mat-cell *matCellDef="let element">{{element.date_enregistrement}} </td>
+          </ng-container>
+          <ng-container matColumnDef="Rapport">
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let element">
+              <button mat-flat-button color="accent" [routerLink]="['/rapport', element.code_matricule]" class="demo-button">
+                Rapport
+              </button>  </td>
+          </ng-container>
+        <!-- Symbol Column -->
+        
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </mat-card-content>
+  </mat-card>
+
   
-    <!-- Weight Column -->
-    <ng-container matColumnDef="CNI client">
-      <th mat-header-cell *matHeaderCellDef> CNI client </th>
-      <td mat-cell *matCellDef="let element"> {{element.cni_client}} </td>
-    </ng-container>
-    <ng-container matColumnDef="date enregistremnt">
-        <th mat-header-cell *matHeaderCellDef>date enregistremnt </th>
-        <td mat-cell *matCellDef="let element">{{element.date_enregistrement}} </td>
-      </ng-container>
-      <ng-container matColumnDef="Rapport">
-        <th mat-header-cell *matHeaderCellDef></th>
-        <td mat-cell *matCellDef="let element">
-            <button mat-flat-button color="accent"  class="demo-button">
-            Rapport
-          </button>  </td>
-      </ng-container>
-    <!-- Symbol Column -->
-    
-  
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table>
-  
-</div>
+

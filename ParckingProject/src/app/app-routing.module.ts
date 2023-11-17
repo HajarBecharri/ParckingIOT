@@ -7,6 +7,7 @@ import { EnregistrementComponent } from './components/enregistrement/enregistrem
 import { ListCarsComponent } from './components/list-cars/list-cars.component';
 import { AddAbonnementComponent } from './components/add-abonnement/add-abonnement.component';
 import { ParckingComponent } from './components/parcking/parcking.component';
+import { RapportComponent } from './components/rapport/rapport.component';
 const routes: Routes = [
 {path:"home" , component:HomeComponent},
 {path:"" , component:UserComponent},
@@ -14,7 +15,8 @@ const routes: Routes = [
 { path: 'enregistrement', component: EnregistrementComponent },
 { path: 'list-cars', component: ListCarsComponent },
 { path: 'add-abonnement', component: AddAbonnementComponent },
-{ path: 'parcking', component: ParckingComponent  }
+{ path: 'parcking', component: ParckingComponent},
+{ path: 'rapport/:codeMatricule', component: RapportComponent } 
 ];
 
 @NgModule({

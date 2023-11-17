@@ -5,6 +5,7 @@ import json
 import mysql.connector
 import myCar as car
 import user as user
+import enregistrement as eng
 import jwt
 from datetime import datetime,timedelta
 
@@ -37,11 +38,26 @@ def saveCar():
     mydb.commit()
     return {'status':'save :'}
 
+@app.route('/enregistrement' , methods = ['GET'])
+def getenregistremnts():
+    mylist = []
+    req = "select * from enregistrement"
+    
+
+    myCursor = mydb.cursor()
+    myCursor.execute(req)
+    myresult = myCursor.fetchall()
+    for x in myresult:
+        enregistrement_instance = eng.Enregistrement(x[0], x[1], str(x[2]), str(x[3]))
+        mylist.append(enregistrement_instance.__dict__)
+    
+    return json.dumps(mylist)
 @app.route('/cars' , methods = ['GET'])
 def getCars():
     mylist = []
     req = "select * from cars"
     
+
     myCursor = mydb.cursor()
     myCursor.execute(req)
     myresult = myCursor.fetchall()
@@ -53,7 +69,7 @@ def getCars():
 
 @app.route('/carsInParking', methods=['GET'])
 def getCarsInParking():
-    
+    mylist = []
     try:
         myCursor = mydb.cursor()
 

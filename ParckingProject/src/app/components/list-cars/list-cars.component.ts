@@ -9,6 +9,7 @@ import { MatriculeModel } from '../add-car/car.module';
   styleUrls: ['./list-cars.component.css']
 })
 export class ListCarsComponent {
+  title = 'Liste des Voitures'
   cars!:MatriculeModel[];
   displayedColumns: string[] = ['numero matricule','Nom client', 'CNI client','date enregistremnt','etat','Rapport'];
   dataSource!:MatriculeModel[]
@@ -41,5 +42,6 @@ export class ListCarsComponent {
     this.searchQuery = '';
     this.dataSource = this.cars;
   }
+  
 
 }

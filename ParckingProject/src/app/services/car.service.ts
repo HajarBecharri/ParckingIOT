@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { MatriculeModel } from '../components/add-car/car.module';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { EnregistrementModel } from '../components/enregistrement/enregistrement.module';
 
 @Injectable({
   providedIn: 'root'
@@ -30,6 +31,10 @@ export class CarService {
 
     return  this.http.get<MatriculeModel[]>(this.url+"/carsInParking" ,this.httpOptions );
  }
+  getenregistrements():Observable<EnregistrementModel[]>{
+
+  return  this.http.get<EnregistrementModel[]>(this.url+"/enregistrement" ,this.httpOptions );
+}
   
   delete(id:number){
     return this.http.get(this.url+"/deletecar/"+id );
