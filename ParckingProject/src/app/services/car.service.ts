@@ -4,6 +4,7 @@ import { MatriculeModel } from '../components/add-car/car.module';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { EnregistrementModel } from '../components/enregistrement/enregistrement.module';
+import { AbonnementModel } from '../components/add-abonnement/abonnement.module';
 
 @Injectable({
   providedIn: 'root'
@@ -43,6 +44,12 @@ export class CarService {
   update(car:MatriculeModel){
     return this.http.post(this.url+"/updatecar",car );
   }
+
+  addAbonnement(abonnement: AbonnementModel): Observable<any> {
+    return this.http.post(this.url + "/saveabonnement", abonnement, this.httpOptions);
+  }
+
+
 
 
 

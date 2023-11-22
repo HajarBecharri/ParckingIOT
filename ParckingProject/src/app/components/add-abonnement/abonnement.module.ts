@@ -1,5 +1,5 @@
 export class AbonnementModel {
-    id!: number;
-    date_expiration!: Date | null;
+  
+    date_expiration!: string|null;
     code_matricule!: string;
   }

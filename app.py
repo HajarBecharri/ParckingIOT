@@ -37,6 +37,24 @@ def saveCar():
     myCursor.execute(req , val)
     mydb.commit()
     return {'status':'save :'}
+@app.route('/saveabonnement', methods=['POST'])
+def save_abonnement():
+    args = request.json
+    code_matricule = args.get('code_matricule')
+    date_expiration = args.get('date_expiration')
+
+    myCursor = mydb.cursor()
+
+    req = "INSERT INTO abonnement (code_matricule, date_expiration) VALUES (%s, %s)"
+    val = (code_matricule, date_expiration)
+
+    try:
+        myCursor.execute(req, val)
+        mydb.commit()
+        return {'status': 'success', 'message': 'Abonnement ajouté avec succès'}
+    except Exception as e:
+        return {'status': 'error', 'message': str(e)}
+
 
 @app.route('/enregistrement' , methods = ['GET'])
 def getenregistremnts():
@@ -141,6 +159,15 @@ def check_entre():
     try:
         data = request.get_json()
         code_matricule = data.get('code_matricule')
+         # Check if the parking has available space (less than 30 cars in total)
+        req_space_check = "SELECT COUNT(*) FROM cars WHERE etat = 'interieur'"
+        myCursor = mydb.cursor()
+        myCursor.execute(req_space_check)
+        total_cars_in_parking = myCursor.fetchone()[0]
+
+        if total_cars_in_parking >= 30:
+            return jsonify({"error": "Parking is full. No available space."})
+
 
         # Check if the car exists
         car_exists_query = "SELECT * FROM cars WHERE code_matricule = %s"
