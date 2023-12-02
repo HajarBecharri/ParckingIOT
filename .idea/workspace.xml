@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d37de311-deb5-4e96-9f17-0a7c8d747b8e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/ParckingProject/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/.vscode/extensions.json" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/.vscode/extensions.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/.vscode/launch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/.vscode/tasks.json" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/.vscode/tasks.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/app.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/app.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/app.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/components/add-abonnement/abonnement.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/components/add-abonnement/abonnement.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/components/add-abonnement/add-abonnement.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/components/add-abonnement/add-abonnement.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/components/add-abonnement/add-abonnement.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/components/add-abonnement/add-abonnement.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/components/add-abonnement/add-abonnement.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/components/add-abonnement/add-abonnement.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/components/add-abonnement/add-abonnement.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/components/add-abonnement/add-abonnement.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/components/add-car/add-car.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/components/add-car/add-car.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/components/add-car/add-car.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/components/add-car/add-car.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/components/add-car/add-car.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/components/add-car/add-car.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/components/add-car/add-car.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/components/add-car/add-car.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/components/add-car/car.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/components/add-car/car.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/components/enregistrement/enregistrement.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/components/enregistrement/enregistrement.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/components/enregistrement/enregistrement.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/components/enregistrement/enregistrement.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/components/enregistrement/enregistrement.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/components/enregistrement/enregistrement.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/components/enregistrement/enregistrement.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/components/enregistrement/enregistrement.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/components/home/home.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/components/home/home.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/components/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/components/home/home.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/components/home/home.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/components/home/home.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/components/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/components/home/home.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/components/list-cars/list-cars.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/components/list-cars/list-cars.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/components/list-cars/list-cars.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/components/list-cars/list-cars.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/components/list-cars/list-cars.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/components/list-cars/list-cars.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/components/list-cars/list-cars.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/components/list-cars/list-cars.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/components/navbar/navbar.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/components/navbar/navbar.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/components/navbar/navbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/components/navbar/navbar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/components/navbar/navbar.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/components/navbar/navbar.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/components/navbar/navbar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/components/navbar/navbar.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/components/parcking/parcking.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/components/parcking/parcking.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/components/parcking/parcking.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/components/parcking/parcking.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/components/parcking/parcking.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/components/parcking/parcking.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/components/parcking/parcking.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/components/parcking/parcking.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/components/rapport/rapport.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/components/rapport/rapport.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/components/rapport/rapport.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/components/rapport/rapport.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/components/rapport/rapport.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/components/rapport/rapport.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/components/user/user.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/components/user/user.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/components/user/user.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/components/user/user.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/components/user/user.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/components/user/user.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/components/user/user.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/components/user/user.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/components/user/user.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/components/user/user.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/services/car.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/services/car.service.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/services/car.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/services/car.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/services/user.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/services/user.service.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/services/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/services/user.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/app/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/app/user.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/src/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/tsconfig.app.json" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/tsconfig.app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParckingProject/tsconfig.spec.json" beforeDir="false" afterPath="$PROJECT_DIR$/ParckingProject/tsconfig.spec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abonnement.py" beforeDir="false" afterPath="$PROJECT_DIR$/abonnement.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enregistrement.py" beforeDir="false" afterPath="$PROJECT_DIR$/enregistrement.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myCar.py" beforeDir="false" afterPath="$PROJECT_DIR$/myCar.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/user.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2Ylnq60F8dai1fhcOvp4JthxHbx" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d37de311-deb5-4e96-9f17-0a7c8d747b8e" name="Changes" comment="" />
+      <created>1701109227574</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1701109227574</updated>
+      <workItem from="1701109233377" duration="15000" />
+    </task>
+    <servers />
+  </component>
+</project>

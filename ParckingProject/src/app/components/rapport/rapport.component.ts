@@ -32,5 +32,24 @@ export class RapportComponent {
   
     );
   }
+  downloadTable() {
+    const table = document.getElementById('enregistrementsTable');
+    if (table) {
+      const tableHtml = table.outerHTML;
+      const blob = new Blob([tableHtml], { type: 'text/html' });
+      const url = window.URL.createObjectURL(blob);
+
+      
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'enregistrementsTable.html';
+
+    
+      a.click();
+
+      
+      window.URL.revokeObjectURL(url);
+    }
+  }
 
 }

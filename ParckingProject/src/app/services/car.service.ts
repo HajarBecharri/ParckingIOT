@@ -21,20 +21,20 @@ export class CarService {
 
   saveCare(matricule:MatriculeModel){
 
-    return this.http.post(this.url+"/savecar" , matricule , this.httpOptions );
+    return this.http.post(this.url+"/add_car" , matricule , this.httpOptions );
 
   }
   getAllcars():Observable<MatriculeModel[]>{
 
-     return  this.http.get<MatriculeModel[]>(this.url+"/cars" ,this.httpOptions );
+     return  this.http.get<MatriculeModel[]>(this.url+"/get_cars" ,this.httpOptions );
   }
   getParckingcars():Observable<MatriculeModel[]>{
 
-    return  this.http.get<MatriculeModel[]>(this.url+"/carsInParking" ,this.httpOptions );
+    return  this.http.get<MatriculeModel[]>(this.url+"/get_cars_in_parking" ,this.httpOptions );
  }
   getenregistrements():Observable<EnregistrementModel[]>{
 
-  return  this.http.get<EnregistrementModel[]>(this.url+"/enregistrement" ,this.httpOptions );
+  return  this.http.get<EnregistrementModel[]>(this.url+"/get_enregistrements" ,this.httpOptions );
 }
   
   delete(id:number){
@@ -46,7 +46,7 @@ export class CarService {
   }
 
   addAbonnement(abonnement: AbonnementModel): Observable<any> {
-    return this.http.post(this.url + "/saveabonnement", abonnement, this.httpOptions);
+    return this.http.post(this.url + "/save_abonnement", abonnement, this.httpOptions);
   }
 
 
